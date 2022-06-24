@@ -2,12 +2,12 @@
 <hr />
 <ul class="list-group">
   <li
-    class="list-group-item"
+    class="list-group-item cursor-pointer"
     *ngFor="let item of templateMenu"
     [routerLink]="[item.ruta]"
     routerLinkActive="active"
   >
-    {{ item.texto }} 
+    {{ item.texto }}
   </li>
 </ul>
 <h2 class="mt-5">Reactive</h2>

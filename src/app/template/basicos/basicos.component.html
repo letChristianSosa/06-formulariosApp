@@ -3,14 +3,14 @@
 
 <div class="row">
   <div class="col">
-    <form (ngSubmit)="guardar()" #MiFormulario="ngForm">
+    <form (ngSubmit)="guardar()" autocomplete="off" #MiFormulario="ngForm">
       <!-- Campo de Producto -->
       <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Producto</label>
         <div class="col-sm-9">
           <input
             type="text"
-            ngModel
+            [ngModel]="initForm.producto"
             name="producto"
             class="form-control"
             placeholder="Nombre del Producto"
@@ -29,7 +29,7 @@
         <div class="col-sm-9">
           <input
             type="number"
-            ngModel
+            [ngModel]="initForm.precio"
             name="precio"
             class="form-control"
             placeholder="Precio del Producto"
@@ -49,7 +49,7 @@
         <div class="col-sm-9">
           <input
             type="number"
-            ngModel
+            [ngModel]="initForm.existencias"
             name="existencias"
             class="form-control"
             placeholder="Existencias del Producto"
